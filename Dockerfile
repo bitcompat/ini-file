@@ -22,7 +22,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build <<EOT /bin/bash
 
     mkdir -p /opt/bitnami/${TARGET_DIR}/licenses
     mkdir -p /opt/bitnami/${TARGET_DIR}/bin
-    cp -f COPYING /opt/bitnami/${TARGET_DIR}/licenses/${PACKAGE}-${VERSION}.txt
+    cp -f LICENSE.md /opt/bitnami/${TARGET_DIR}/licenses/${PACKAGE}-${VERSION}.md
     echo "${PACKAGE}-${VERSION},GPL2,https://github.com/bitnami/ini-file/archive/${REF}.tar.gz" > /opt/bitnami/common/licenses/gpl-source-links.txt
     cp -f ${PACKAGE} /opt/bitnami/${TARGET_DIR}/bin/${PACKAGE}
     popd
