@@ -4,7 +4,7 @@ FROM golang:1.20-bullseye AS golang-builder
 ARG PACKAGE=ini-file
 ARG TARGET_DIR=common
 # renovate: datasource=github-releases depName=bitnami/ini-file extractVersion=^v(?<version>\d+\.\d+.\d+)
-ARG VERSION=1.4.5
+ARG VERSION=1.4.6
 ARG REF=v${VERSION}
 ARG CGO_ENABLED=0
 
