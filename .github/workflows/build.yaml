@@ -10,7 +10,7 @@ jobs:
     uses: bitcompat/base/.github/workflows/build.yaml@main
     with:
       name: main
-      version: 1.4.5 # renovate: datasource=github-releases depName=bitnami/ini-file versioning=regex:^(?<major>\d+)(\.(?<minor>\d+))(\.(?<patch>\d+))$ extractVersion=^v(?<version>\d+\.\d+.\d+)
+      version: 1.4.6 # renovate: datasource=github-releases depName=bitnami/ini-file versioning=regex:^(?<major>\d+)(\.(?<minor>\d+))(\.(?<patch>\d+))$ extractVersion=^v(?<version>\d+\.\d+.\d+)
       revision: '1'
       latest: true
       major_only_tag: true
