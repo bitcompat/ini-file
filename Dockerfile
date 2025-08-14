@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.6
-FROM golang:1.21-bullseye AS golang-builder
+FROM golang:1.24-bullseye AS golang-builder
 
 ARG PACKAGE=ini-file
 ARG TARGET_DIR=common
