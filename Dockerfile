@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.6
+# syntax=docker/dockerfile:1.20
 FROM golang:1.24-bullseye AS golang-builder
 
 ARG PACKAGE=ini-file
