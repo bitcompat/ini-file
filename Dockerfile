@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.20
-FROM golang:1.24-bullseye AS golang-builder
+FROM golang:1.25-bookworm AS golang-builder
 
 ARG PACKAGE=ini-file
 ARG TARGET_DIR=common
@@ -30,6 +30,6 @@ RUN --mount=type=cache,target=/root/.cache/go-build <<EOT /bin/bash
     rm -rf ${PACKAGE}
 EOT
 
-FROM bitnami/minideb:bullseye as stage-0
+FROM bitnami/minideb:bookworm as stage-0
 
 COPY --link --from=golang-builder /opt/bitnami /opt/bitnami
