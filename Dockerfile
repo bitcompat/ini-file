@@ -4,7 +4,7 @@ FROM golang:1.25-bookworm AS golang-builder
 ARG PACKAGE=ini-file
 ARG TARGET_DIR=common
 # renovate: datasource=github-releases depName=bitnami/ini-file extractVersion=^v(?<version>\d+\.\d+.\d+)
-ARG VERSION=1.4.9
+ARG VERSION=1.4.10
 ARG REF=v${VERSION}
 ARG CGO_ENABLED=0
 
