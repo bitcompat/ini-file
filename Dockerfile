@@ -4,7 +4,7 @@ FROM golang:1.27-trixie AS golang-builder
 ARG PACKAGE=ini-file
 ARG TARGET_DIR=common
 # renovate: datasource=github-releases depName=bitnami/ini-file extractVersion=^v(?<version>\d+\.\d+.\d+)
-ARG BUILD_VERSION=1.4.9
+ARG BUILD_VERSION=1.4.10
 ARG VERSION=${BUILD_VERSION}
 ARG REF=v${VERSION}
 ARG CGO_ENABLED=0
