@@ -1,10 +1,11 @@
 # syntax=docker/dockerfile:1.27
-FROM golang:1.27-bookworm AS golang-builder
+FROM golang:1.27-trixie AS golang-builder
 
 ARG PACKAGE=ini-file
 ARG TARGET_DIR=common
 # renovate: datasource=github-releases depName=bitnami/ini-file extractVersion=^v(?<version>\d+\.\d+.\d+)
-ARG VERSION=1.4.10
+ARG BUILD_VERSION=1.4.9
+ARG VERSION=${BUILD_VERSION}
 ARG REF=v${VERSION}
 ARG CGO_ENABLED=0
 
@@ -30,6 +31,6 @@ RUN --mount=type=cache,target=/root/.cache/go-build <<EOT /bin/bash
     rm -rf ${PACKAGE}
 EOT
 
-FROM bitnami/minideb:bookworm as stage-0
+FROM bitnami/minideb:trixie as stage-0
 
 COPY --link --from=golang-builder /opt/bitnami /opt/bitnami
